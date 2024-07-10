@@ -12,23 +12,18 @@ class App(QWidget):
         self.setWindowTitle(self.title)
         self.setGeometry(100, 100, 400, 200)
 
-        # Create layout
         layout = QVBoxLayout()
 
-        # Create a label
         self.label = QLabel('Enter your name:', self)
         layout.addWidget(self.label)
 
-        # Create a line edit
         self.line_edit = QLineEdit(self)
         layout.addWidget(self.line_edit)
 
-        # Create a button
         self.button = QPushButton('Show Name', self)
         self.button.clicked.connect(self.show_name)
         layout.addWidget(self.button)
 
-        # Set layout
         self.setLayout(layout)
 
         self.show()
